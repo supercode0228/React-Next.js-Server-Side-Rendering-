@@ -6,21 +6,22 @@ module.exports = {
         {
           loader: 'emit-file-loader',
           options: {
-            name: 'dist/[path][name].[ext]'
-          }
+            name: 'dist/[path][name].[ext]',
+          },
         },
         'babel-loader',
         'styled-jsx-css-loader',
         {
           loader: 'sass-loader',
-          options: { sourceMap: dev }
-        }
-      ]
-    })
+          options: { sourceMap: dev },
+        },
+      ],
+    });
 
-    return config
-  }
-}
+    return config;
+  },
+};
 
-const withSass = require('@zeit/next-sass')
-module.exports = withSass()
+const withSass = require('@zeit/next-sass');
+
+module.exports = withSass();
